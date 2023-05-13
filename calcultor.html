@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Caculator</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+        <div class="row mb-2">
+            <div class="col-md-8 mx-auto">
+            <label class="mx-2" for="value1">Value1: </label><input type="text" id="value1"/>
+            </div>
+        </div>
+    
+        <div class="row mb-2">
+            <div class="col-md-8 mx-auto">
+            <label class="mx-2" for="value2">Value2: </label><input type="text" id="value2"/>
+            </div>
+        </div>
+    
+        <div class="row mb-2">
+            <div class="col-md-8 mx-auto">
+            <label class="mx-2" for="Result">Result: </label><input type="text" id="result" readonly/>
+            </div>
+        </div>
+        <div class="row mb-2">
+          <div class="col-md-8 mx-auto">
+            <button class="btn btn-primary mt-2" onclick="add()">Add</button>
+            <button class="btn btn-primary mt-2" onclick="multiply()">Multiply</button>
+          </div>
+        </div>  
+
+<script>
+function add() {
+  document.getElementById("result").value =parseInt(document.getElementById("value1").value) + parseInt(document.getElementById("value2").value);
+}
+function multiply(){
+    document.getElementById("result").value =parseInt(document.getElementById("value1").value) * parseInt(document.getElementById("value2").value);
+}
+</script>
+
+</body>
